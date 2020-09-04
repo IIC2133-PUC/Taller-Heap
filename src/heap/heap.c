@@ -3,18 +3,7 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <stdio.h>
-
-/*****************************************************************************/
-/**************************** Funciones Útiles *******************************/
-/*****************************************************************************/
-
-/** Indica si un entero positivo no nulo es potencia de 2 */
-bool is_power_of_2(int x)
-{
-  // Chequeamos que el input esté dentro del rango válido
-  assert(x >= 0);
-  return (x &(x - 1)) == 0;
-}
+#include <math.h>
 
 /*****************************************************************************/
 /**************************** Memory Management ******************************/
