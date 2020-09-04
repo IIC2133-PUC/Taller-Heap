@@ -155,7 +155,7 @@ static void reset()
 bool heap_has_all_properties(Heap* heap, char* context)
 {
   bool has_error = false;
-  if (is_heap(heap))
+  if (!is_heap(heap))
   {
     has_error = true;
     error_message();
@@ -166,7 +166,7 @@ bool heap_has_all_properties(Heap* heap, char* context)
     printf("%s\n", context);
     reset();
   }
-  if (are_counts_correct(heap))
+  if (!are_counts_correct(heap))
   {
     has_error = true;
     error_message();
@@ -176,7 +176,7 @@ bool heap_has_all_properties(Heap* heap, char* context)
     printf("%s\n", context);
     reset();
   }
-  if (are_heights_correct(heap))
+  if (!are_heights_correct(heap))
   {
     has_error = true;
     error_message();
@@ -186,7 +186,7 @@ bool heap_has_all_properties(Heap* heap, char* context)
     printf("%s\n", context);
     reset();
   }
-  if (is_balanced(heap))
+  if (!is_balanced(heap))
   {
     has_error = true;
     printf("Tu heap no está balanceado luego de llamar la función ");
@@ -194,7 +194,7 @@ bool heap_has_all_properties(Heap* heap, char* context)
     printf("%s\n", context);
     reset();
   }
-  if (is_left_skewed(heap))
+  if (!is_left_skewed(heap))
   {
     has_error = true;
     error_message();
